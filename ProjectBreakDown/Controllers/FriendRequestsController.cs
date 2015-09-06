@@ -210,6 +210,11 @@ namespace ProjectBreakDown.Controllers
                 return BadRequest();
             }
 
+            if (friendRequest.status != "Rejected")
+            {
+                return BadRequest();
+            }
+
 
             if (friendRequest.ToName != User.Identity.Name)
             {
