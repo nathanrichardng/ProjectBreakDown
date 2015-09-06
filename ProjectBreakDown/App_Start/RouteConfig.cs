@@ -13,6 +13,8 @@ namespace ProjectBreakDown
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //ignore ASP.Net controller based routing when dealing with Angular portion of app
+            routes.IgnoreRoute("Angular/{*pathInfo}");
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
