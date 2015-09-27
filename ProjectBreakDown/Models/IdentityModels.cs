@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using System.Data.Entity;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace ProjectBreakDown.Models
 {
@@ -15,6 +16,7 @@ namespace ProjectBreakDown.Models
         public virtual ICollection<ProjectTask> tasks { get; set; }
         public virtual ICollection<FriendRequest> friendRequestsReceived { get; set; }
         public virtual ICollection<FriendRequest> friendRequestsSent { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType

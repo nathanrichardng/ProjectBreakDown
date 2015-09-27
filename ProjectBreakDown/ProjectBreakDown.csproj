@@ -205,9 +205,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201509060027414_initial.cs" />
-    <Compile Include="Migrations\201509060027414_initial.Designer.cs">
-      <DependentUpon>201509060027414_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201509271111295_initial.cs" />
+    <Compile Include="Migrations\201509271111295_initial.Designer.cs">
+      <DependentUpon>201509271111295_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -216,12 +216,22 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\ProjectTask.cs" />
+    <Compile Include="Models\UserProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Angular\FriendRequests\FriendRequests.html" />
+    <Content Include="Angular\FriendRequests\FriendRequests.js" />
+    <Content Include="Angular\Friends\Friends.html" />
+    <Content Include="Angular\Friends\Friends.js" />
+    <Content Include="Angular\Login\Login.html" />
+    <Content Include="Angular\Login\Login.js" />
+    <Content Include="Angular\Services\AuthService.js" />
+    <Content Include="Angular\Services\FriendRequestService.js" />
+    <Content Include="Angular\Services\FriendService.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -298,8 +308,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201509060027414_initial.resx">
-      <DependentUpon>201509060027414_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201509271111295_initial.resx">
+      <DependentUpon>201509271111295_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

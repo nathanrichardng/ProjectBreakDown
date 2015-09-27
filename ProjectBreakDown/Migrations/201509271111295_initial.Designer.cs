@@ -13,7 +13,7 @@ namespace ProjectBreakDown.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201509060027414_initial"; }
+            get { return "201509271111295_initial"; }
         }
         
         string IMigrationMetadata.Source

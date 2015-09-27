@@ -25,9 +25,9 @@ namespace ProjectBreakDown.Models
         public DateTime SentOn { get; set; }
         public string status { get; set; }
         [JsonIgnore]
-        public ApplicationUser FromUser { get; set; }
+        public virtual ApplicationUser FromUser { get; set; }
         [JsonIgnore]
-        public ApplicationUser ToUser { get; set; }
+        public virtual ApplicationUser ToUser { get; set; }
 
         public string AcceptRequest()
         {

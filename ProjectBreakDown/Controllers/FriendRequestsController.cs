@@ -132,6 +132,12 @@ namespace ProjectBreakDown.Controllers
             }
 
             friendRequest.AcceptRequest();
+
+            var fromRequest = new FriendRequest(friendRequest.ToUser, friendRequest.FromUser);
+            fromRequest.SentOn = friendRequest.SentOn;
+            fromRequest.AcceptRequest();
+            db.FriendRequests.Add(fromRequest);
+            
             db.SaveChanges();
 
             return Ok(friendRequest.status);
@@ -158,11 +164,11 @@ namespace ProjectBreakDown.Controllers
 
         //GET: api/Friends
         [Route("api/Friends")]
-        [ResponseType(typeof(FriendRequest))]
+        [ResponseType(typeof(string))]
         [HttpGet]
         public IHttpActionResult GetFriends()
         {
-            var friends = db.FriendRequests.Where(fr => fr.status == "Accepted" && (fr.ToName == User.Identity.Name || fr.FromName == User.Identity.Name));
+            var friends = db.FriendRequests.Where(fr => fr.status == "Accepted" && fr.ToName == User.Identity.Name);
             return Ok(friends);
         }
 
